@@ -7,7 +7,7 @@ import './index.css'
 
 window.React = require('react')
 
-function bootstrapRaw () {
+function bootstrapRaw() {
   const mockRuntime = { on: () => {}, done: () => {} }
   const mockIms = {}
   ReactDOM.render(<App runtime={mockRuntime} ims={mockIms} />, document.getElementById('root'))
@@ -20,7 +20,7 @@ try {
   bootstrapRaw()
 }
 
-function bootstrapInExcShell () {
+function bootstrapInExcShell() {
   const runtime = Runtime()
   runtime.on('ready', ({ imsOrg, imsToken, imsProfile }) => {
     runtime.done()
@@ -29,6 +29,6 @@ function bootstrapInExcShell () {
       document.getElementById('root')
     )
   })
-  runtime.solution = { icon: 'AdobeExperienceCloud', title: 'File Vault', shortTitle: 'Vault' }
-  runtime.title = 'File Vault'
+  runtime.solution = { icon: 'AdobeExperienceCloud', title: 'Hello App', shortTitle: 'Hello' }
+  runtime.title = 'Hello App'
 }

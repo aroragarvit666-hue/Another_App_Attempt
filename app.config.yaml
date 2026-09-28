@@ -3,31 +3,11 @@ application:
   web: web-src
   runtimeManifest:
     packages:
-      file-vault:
+      hello-app:
         license: Apache-2.0
         actions:
-          upload-file:
-            function: actions/upload-file/index.js
-            web: 'yes'
-            runtime: nodejs:22
-            inputs:
-              LOG_LEVEL: debug
-            limits:
-              timeout: 300000
-            annotations:
-              require-adobe-auth: true
-              final: true
-          list-files:
-            function: actions/list-files/index.js
-            web: 'yes'
-            runtime: nodejs:22
-            inputs:
-              LOG_LEVEL: debug
-            annotations:
-              require-adobe-auth: true
-              final: true
-          delete-file:
-            function: actions/delete-file/index.js
+          greet:
+            function: actions/greet/index.js
             web: 'yes'
             runtime: nodejs:22
             inputs:
